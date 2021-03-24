@@ -1,0 +1,48 @@
+.Income,
+.Transfer,
+.Expences {
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -3px 10px 13px 8px rgba(0, 0, 0, 0.21);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -3px 10px 13px 8px rgba(0, 0, 0, 0.21);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  position: relative;
+}
+.Income,
+.TransferReciveAmount {
+  color: green;
+}
+.Expences,
+.TransferSendAmount {
+  color: red;
+}
+.Transfer {
+  color: rgb(139, 34, 139);
+}
+.TrashBtn {
+  position: absolute;
+  top: 26px;
+  right: 3px;
+  background: transparent;
+  border: none;
+  transition: all 0.2s linear;
+}
+.TrashBtn:hover {
+  transform: rotate(30deg);
+}
+.TrashBtn:active {
+  transform: rotate(0deg);
+  transform: scale(1.2);
+}
+.Amount,
+.TransferSendAmount,
+.TransferReciveAmount {
+  margin-right: 30px;
+}
+.Transfers {
+  text-align: center;
+  color: rgb(139, 34, 139);
+}

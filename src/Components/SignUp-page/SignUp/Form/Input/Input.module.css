@@ -1,0 +1,44 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.Input label {
+  margin-bottom: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #e0cbe4;
+  font-weight: bold;
+  font-size: 18px;
+}
+.input {
+  color: rgb(199, 16, 138);
+  width: 100%;
+  padding: 5px 10px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid rgb(158, 41, 113);
+  background: inherit;
+  outline: 0;
+  transition: all 0.3s linear;
+}
+input:focus {
+  transform: scale(0.95);
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  box-shadow: 23px 12px 0 30px #ece9e6 inset !important;
+  color: rgb(199, 16, 138);
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  color: rgb(199, 16, 138);
+}
+.Invalid {
+  background: #e97676;
+  padding: 10px;
+  border-radius: 5px;
+}

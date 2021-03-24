@@ -1,0 +1,53 @@
+.mainContainer {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+  width: 50%;
+  margin: 0 auto;
+}
+.container {
+  margin: 0 auto;
+}
+.moneyImg {
+  font-size: 80px;
+  color: rgb(189, 20, 104);
+}
+.mainContainer h1,
+.mainContainer h3,
+.mainContainer p {
+  color: rgb(189, 20, 104);
+  text-align: center;
+}
+.Steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.StepsTree {
+  display: flex;
+  flex-direction: column;
+}
+.Steps span {
+  color: rgb(189, 20, 104);
+  font-weight: 900;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 22px;
+}
+.BorderBottomUsser {
+  border: 1px solid #000000;
+}
+.userName {
+  font-weight: 700;
+}
+.Name {
+  color: #000;
+}
+@media (max-width: 756px) {
+  .mainContainer {
+    width: 98%;
+  }
+}

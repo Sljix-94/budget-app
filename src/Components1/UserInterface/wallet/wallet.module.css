@@ -1,0 +1,130 @@
+.Container {
+  margin: 80px auto 0;
+  width: 70%;
+}
+.header {
+  background-image: linear-gradient(
+    to right,
+    #8a05a9,
+    #a005ae,
+    #b509b2,
+    #ca0fb5,
+    #de17b8
+  );
+  color: #fff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 20px;
+}
+.budget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.budget h2 {
+  margin: 0;
+  font-size: 34px;
+}
+.budget p {
+  font-size: 28px;
+  margin: 0;
+}
+.IncExpeContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.IncExpeContainer div {
+  margin-top: 40px;
+  color: #000;
+  background: #fff;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -3px 10px 13px 8px rgba(0, 0, 0, 0.21);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -3px 10px 13px 8px rgba(0, 0, 0, 0.21);
+}
+.IncExpeContainer div p {
+  margin: 0;
+  padding: 3px;
+}
+.arrowUp {
+  color: rgb(5, 104, 1);
+  font-size: 24px;
+  transform: rotate(40deg);
+}
+.arrowDown {
+  color: rgb(184, 9, 9);
+  font-size: 24px;
+  transform: translateY(20%);
+}
+
+/* MIDDLE AREA */
+
+.Transaction {
+  display: flex;
+}
+.actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.TransferMoney {
+  background: rgb(100, 4, 226);
+  padding: 26px;
+  color: #fff;
+}
+.AddMoney {
+  background: rgb(21, 122, 21);
+  padding: 26px;
+  color: #fff;
+}
+.IncomeMoney {
+  background: rgb(155, 51, 51);
+  padding: 26px;
+  color: #fff;
+}
+.Inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.Inputs button {
+  background: transparent;
+  border: none;
+  outline: 0;
+  color: #fff;
+  font-size: 22px;
+}
+
+input {
+  padding: 4px;
+  outline: 0;
+}
+/* -----Left side----- */
+.transferList {
+  flex: 2;
+}
+
+@media (max-width: 576px) {
+  .Container {
+    width: 90%;
+    margin-top: 60px;
+  }
+  .IncExpeContainer div {
+    width: 40%;
+  }
+  .Inputs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1100px) {
+  .Transaction {
+    flex-direction: column;
+  }
+  ,
+  .IncExpeContainer div {
+    width: 48%;
+  }
+}

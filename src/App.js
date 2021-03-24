@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import SignUp from "./Components/SignUp-page/SignUp/SignUp";
+import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import UserInterface from "./Components1/UserInterface/UserInterface";
+import * as action from "./Store/actions/index";
+
+class App extends Component {
+  componentDidMount() {
+    const usersFromStorage = JSON.parse(localStorage.getItem("users"));
+
+    if (usersFromStorage !== null) {
+      this.props.putLocalStorageInUssers(usersFromStorage);
+    }
+  }
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route path="/user" component={UserInterface} />
+          <Route path="/" exact component={SignUp} />
+        </Switch>
+      </div>
+    );
+  }
 }
+const mapStateToProps = (state) => {
+  return {
+    activeUser: state.form.activeUser,
+    allUsers: state.form.users,
+  };
+};
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    putLocalStorageInUssers: (localStorageArr) =>
+      dispatch(action.putLocalStorageInUssers(localStorageArr)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
